@@ -1,0 +1,6 @@
+database_extractor_task:
+  description: >
+    Which is the keyword with maximum total search count? Find this information from the table named {tablename} with schema named {schema}.
+  expected_output: >
+    A list of dictionary elements.
+  agent: database_extractor_agent
