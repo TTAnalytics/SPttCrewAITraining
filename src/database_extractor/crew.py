@@ -20,28 +20,12 @@ llm_azure = LLM(
     api_version=AZURE_OPENAI_API_VERSION  # Azure API version
 )
 
-# slm = LLM(model="ollama/llama3", base_url="http://10.253.4.163:11434")
-
 # Get database details from environment variables
 DB_USERNAME = os.getenv("DB_USERNAME")
 DB_PASSWORD = quote(os.getenv("DB_PASSWORD"))
 DB_HOST = os.getenv("DB_HOST")
 DB_NAME = os.getenv("DB_NAME")
 ODBC_DRIVER = os.getenv("ODBC_DRIVER")
-
-# For SQL server connection
-# Build the connection string
-
-# if DB_PASSWORD:  # SQL Authentication
-#      DATABASE_URL = (
-#          f"mssql+pyodbc://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
-#          f"?driver={ODBC_DRIVER.replace(' ', '+')}"
-#      )
-# else:  # Windows Authentication
-#      DATABASE_URL = (
-#          f"mssql+pyodbc://@{DB_HOST}/{DB_NAME}"
-#          f"?driver={ODBC_DRIVER.replace(' ', '+')}&Trusted_Connection=yes"
-#      )
 
 
 # For Postgres SQL
