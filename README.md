@@ -29,22 +29,36 @@ Install the following before starting the project:
    python3 -m pipx ensurepath
    pipx install crewai
    ```
+
+   **Note**: Errors while installing crewai:
    
-3. **Clone the Repository:**
+   ![image](https://github.com/user-attachments/assets/15a63d94-417f-47e6-8f1a-db87a842efbf)
+
+   **Solution**:
+   
+   Download and install `Microsoft C++ Build Tools`:
+  Url: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+   Installation settings:
+   
+   ![image](https://github.com/user-attachments/assets/49f5f1d5-54eb-4b5e-bf03-a297fc69019e)
+
+   
+4. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/TTAnalytics/TTHackathon.git
    cd TTHackathon
    ```
 
-4. **Install Dependencies:**
+5. **Install Dependencies:**
 
    ```bash
    crewai install
    pip install -e .
    ```
 
-5. **Set Up Environment Variables:**
+6. **Set Up Environment Variables:**
 
    Rename `.env.example` to `.env` and fill in the missing values. Most importantly, you need to add Azure OpenAI API keys and Database connection details.
 
