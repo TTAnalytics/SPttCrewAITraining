@@ -8,10 +8,11 @@ Welcome to the DatabaseExtractor Crew project, powered by [crewAI](https://crewa
 
 Install the following before starting the project:
 
-- Python >=3.10 <=3.13
-- git
+- Python >=3.10 <=3.13<br>
+  url: https://www.python.org/downloads/
+- git<br>
   url: https://git-scm.com/downloads/win
-- vscode
+- vscode<br>
   url: https://code.visualstudio.com/download
 
 ### Setup Instructions
