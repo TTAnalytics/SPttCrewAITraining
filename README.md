@@ -48,8 +48,8 @@ Install the following before starting the project:
 4. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/TTAnalytics/TTHackathon.git
-   cd TTHackathon
+   git clone https://github.com/TTAnalytics/SPttCrewAITraining.git
+   cd SPttCrewAITraining
    ```
 
 5. **Install Dependencies:**
