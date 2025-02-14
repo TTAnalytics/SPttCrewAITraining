@@ -1,28 +1,21 @@
 [project]
-name = "database_extractor"
+name = "base_crew"
 version = "0.0.1"
-description = "Database extraction using crewAI"
+description = "Base Crew using crewAI"
 authors = [
     { name = "Plan.net", email = "plan-net@house-of-communication.com" },
 ]
 requires-python = ">=3.10,<=3.13"
 dependencies = [
     "crewai[tools]>=0.70.1,<1.0.0",
-    "agenticos>=0.0.3.156507",
     "fastapi[all]>=0.109.0",
     "uvicorn>=0.27.0",
     "python-dotenv>=1.0.0",
-    "ollama>=0.4.4",
-    "pyodbc>=5.2.0",
-    "psycopg2-binary>=2.9.10"
+    "ollama>=0.4.4"
 ]
 
 [project.scripts]
-database_extractor = "database_extractor.main:run"
-run_crew = "database_extractor.main:run"
-train = "database_extractor.main:train"
-replay = "database_extractor.main:replay"
-test = "database_extractor.main:test"
+run_crew = "base_crew.main:run"
 
 [build-system]
 requires = [
