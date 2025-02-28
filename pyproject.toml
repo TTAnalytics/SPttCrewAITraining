@@ -1,25 +1,23 @@
 [project]
-name = "base_crew"
-version = "0.0.1"
-description = "Base Crew using crewAI"
-authors = [
-    { name = "Plan.net", email = "plan-net@house-of-communication.com" },
-]
-requires-python = ">=3.10,<=3.13"
+name = "basecrew"
+version = "0.1.0"
+description = "basecrew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
 dependencies = [
-    "crewai[tools]>=0.70.1,<1.0.0",
-    "fastapi[all]>=0.109.0",
-    "uvicorn>=0.27.0",
-    "python-dotenv>=1.0.0",
-    "ollama>=0.4.4"
+    "crewai[tools]>=0.100.1,<1.0.0"
 ]
 
 [project.scripts]
-run_crew = "base_crew.main:run"
+base_crew = "basecrew.main:run"
+run_crew = "basecrew.main:run"
+train = "basecrew.main:train"
+replay = "basecrew.main:replay"
+test = "basecrew.main:test"
 
 [build-system]
-requires = [
-    "hatchling",
-]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.crewai]
+type = "crew"

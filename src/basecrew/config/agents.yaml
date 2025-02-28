@@ -1,4 +1,3 @@
-# src/base_crew/config/agents.yaml
 researcher:
   role: >
     {topic} Senior Data Researcher
