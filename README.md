@@ -25,6 +25,8 @@ Install the following before starting the project:
    
 2. **Install `pipx` and `crewai`:**
 
+   Depending on the system you can try below commands with `python3` or `python`
+   
    ```bash
    python3 -m pip install --user pipx
    python3 -m pipx ensurepath
@@ -33,7 +35,7 @@ Install the following before starting the project:
 
    **Note**: Errors while installing crewai:
    
-   ![image](https://github.com/user-attachments/assets/15a63d94-417f-47e6-8f1a-db87a842efbf)
+   ![image](https://github.com/user-attachments/assets/b546bf69-61f4-4150-b6ba-19b52002e6d4)
 
    **Solution**:
    
@@ -41,8 +43,8 @@ Install the following before starting the project:
   Url: https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
    Installation settings:
-   
-   ![image](https://github.com/user-attachments/assets/49f5f1d5-54eb-4b5e-bf03-a297fc69019e)
+      
+   ![image](https://github.com/user-attachments/assets/120f2aa4-20db-4194-adf6-3cabaa5f6290)
 
    
 4. **Clone the Repository:**
