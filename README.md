@@ -15,7 +15,23 @@ Install the following before starting the project:
 - vscode<br>
   url: https://code.visualstudio.com/download
 
-### Setup Instructions
+### Python installation steps
+
+1. **Download the python setup**
+   
+    Download the setup based on required version and operating system (Windows, MACOS, LINUX)
+  
+    url: https://www.python.org/downloads/
+
+    ![image](https://github.com/user-attachments/assets/cf5cb6b2-574a-4e07-91d9-a23d23808271)
+       
+2. **Installation (Windows)**
+
+   Enable the option to add python to the environment path and click on install now
+
+   ![image](https://github.com/user-attachments/assets/5e13072d-1d84-4d35-9dd6-f0ca8578b03d)  
+
+### CrewAI Setup Instructions
 
 1. **Install `uv`:**
 
