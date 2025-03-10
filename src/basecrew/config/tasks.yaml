@@ -1,17 +1,24 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Conduct thorough research on trending hashtags, relevant events, and engagement trends 
+    for the specified target audience.The target audience is characterized by age {target_age}, gender {target_gender} and 
+    social situation {social_situation}. Write a posting for {posting_date} and the platform {social_media}.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    A compiled list of 10 trending hashtags and 5 significant events relevant to the target audience.
+  agent: social_media_listener
 
-reporting_task:
+content_creation_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Generate 10 unique and engaging {social_media} posts based on the research findings. The target audience is characterized by age {target_age}, gender {target_gender} and 
+    social situation {social_situation}.Each post should be tailored to the target audience and optimized for {social_media} on the {posting_date}.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A document containing 10 high-quality social media posts ready for review.
+  agent: content_creator
+
+editing_task:
+  description: >
+    Review all 10 posts and select the top 3 that best align with audience engagement strategies 
+    and platform requirements.
+  expected_output: >
+    A final selection of 3 optimized posts, refined and ready for publication.
+  agent: senior_editor

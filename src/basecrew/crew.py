@@ -18,18 +18,26 @@ class Basecrew():
 	# If you would like to add tools to your agents, you can learn more about it here:
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	@agent
-	def researcher(self) -> Agent:
+	def social_media_listener(self) -> Agent:
 		return Agent(
-			config=self.agents_config['researcher'],
+			config=self.agents_config['social_media_listener'],
 			verbose=True
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def content_creator(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['content_creator'],
 			verbose=True
 		)
+	
+	@agent
+	def senior_editor(self) -> Agent:
+		return Agent(
+			config=self.agents_config['senior_editor'],
+			verbose=True
+		)
+
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -41,9 +49,16 @@ class Basecrew():
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def content_creation_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
+			config=self.tasks_config['content_creation_task'],
+			output_file='drafts.md'
+		)
+	
+	@task
+	def editing_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['editing_task'],
 			output_file='report.md'
 		)
 

@@ -18,8 +18,11 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+        'target_age': '30-40',
+        'target_gender': 'female',
+        'social_situation': 'young parent',
+        'posting_date': '08.03.2025',
+        'social_media': 'instagram'
     }
     
     try:
