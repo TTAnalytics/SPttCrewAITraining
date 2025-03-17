@@ -59,7 +59,11 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs"
+        'target_age': '30-40',
+        'target_gender': 'female',
+        'social_situation': 'young parent',
+        'posting_date': '08.03.2025',
+        'social_media': 'instagram'
     }
     try:
         Basecrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)

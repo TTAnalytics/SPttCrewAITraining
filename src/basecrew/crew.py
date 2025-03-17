@@ -1,6 +1,10 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from crewai_tools import DallETool, VisionTool
 
+
+dalle_tool = DallETool()
+vision_tool = VisionTool()
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
@@ -38,6 +42,13 @@ class Basecrew():
 			verbose=True
 		)
 
+	@agent
+	def visual_content_creator(self) -> Agent:
+		return Agent(
+			config=self.agents_config['visual_content_creator'],
+			tools=[dalle_tool, vision_tool],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -60,6 +71,13 @@ class Basecrew():
 		return Task(
 			config=self.tasks_config['editing_task'],
 			output_file='report.md'
+		)
+
+	@task
+	def visual_creation_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['visual_creation_task'],
+			output_file='visuals.md'
 		)
 
 	@crew
